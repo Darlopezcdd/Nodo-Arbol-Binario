@@ -11,18 +11,21 @@ package com.mycompany.nodoarbolbinario;
 public class Persona {
     private String cedula;
     private int codProv;
-    private int codCiud;
+    private int codCant;
     private int codParr;
     private String recinto;
     private int numMesa;
+    private char genero;
 
-    public Persona(String cedula, int codProv, int codCiud, int codParr, String recinto, int numMesa) {
+    public Persona(String cedula, int codProv, int codCiud, int codParr, 
+            String recinto, int numMesa, char genero) {
         this.cedula = cedula;
         this.codProv = codProv;
-        this.codCiud = codCiud;
+        this.codCant = codCiud;
         this.codParr = codParr;
         this.recinto = recinto;
         this.numMesa = numMesa;
+        this.genero=genero;
     }
 
     public String getCedula() {
@@ -42,11 +45,11 @@ public class Persona {
     }
 
     public int getCodCiud() {
-        return codCiud;
+        return codCant;
     }
 
     public void setCodCiud(int codCiud) {
-        this.codCiud = codCiud;
+        this.codCant = codCiud;
     }
 
     public int getCodParr() {
@@ -72,5 +75,17 @@ public class Persona {
     public void setNumMesa(int numMesa) {
         this.numMesa = numMesa;
     }
-    
+
+    public char getGenero() {
+        return genero;
+    }
+
+    public void setGenero(char genero) {
+        this.genero = genero;
+    }
+    public String Imprimir()
+    {
+        return "Persona: "+ cedula+";"+codProv+";"+  codCant+";"+ codParr+";"+ 
+             recinto+";"+  numMesa+";"+ genero+" "+"\n";
+    }
 }
